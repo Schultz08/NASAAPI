@@ -113,10 +113,9 @@ function createModal(picUrl, picTitle) {
 
 if (section.childNodes.length < 2) {
 
-    //fetch("https://api.nasa.gov/planetary/apod?api_key=lgsUjZaOxV6jkXPJCVb76f0HmrhX63Vh8qVAjjOF")
-        fetch("https://epic.gsfc.nasa.gov/api/natural?api_key=lgsUjZaOxV6jkXPJCVb76f0HmrhX63Vh8qVAjjOF")
+    fetch("https://api.nasa.gov/planetary/apod?api_key=lgsUjZaOxV6jkXPJCVb76f0HmrhX63Vh8qVAjjOF")
         .then(response => response.json())
-        .then(data => picOfTheDay(data))
+        .then(data => { console.log(data); picOfTheDay(data) })
 
     function picOfTheDay(pic) {
         let podDiv = document.createElement("div");
