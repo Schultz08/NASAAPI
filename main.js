@@ -1,9 +1,9 @@
 //Key ?api_key=lgsUjZaOxV6jkXPJCVb76f0HmrhX63Vh8qVAjjOF
 //date https://api.nasa.gov/EPIC/api/natural/date/2019-05-30?api_key=DEMO_KEY 
+//"https://api.nasa.gov/EPIC/archive/natural/"
 const apiKey = "?api_key=lgsUjZaOxV6jkXPJCVb76f0HmrhX63Vh8qVAjjOF"
 const baseUrl = "https://api.nasa.gov/EPIC/api/natural/"
 const baseArchiveUrl = "https://epic.gsfc.nasa.gov/archive/natural/"
-//"https://api.nasa.gov/EPIC/archive/natural/"
 let url;
 
 const section = document.querySelector("section");
@@ -18,34 +18,15 @@ dateForm.addEventListener("submit", getPlanet);
 function createModal(picUrl, picTitle) {
 
 
-    //modal gets class= modal fade id=podModal tabindex = -1 aria-labelledby=modalTitle aria-hidden=true
     let modal = document.createElement("div");
-
-    //modalDialog gets class = modal-dialog and child modalContent
     let modalDialog = document.createElement("div");
-
-    //modalContent gets class = modal-content and childs header, body, footer
     let modalContent = document.createElement("div");
-
-    //modalHeader gets class = modal-header child h5 then button
     let modalHeader = document.createElement("div");
-    //h5 gets class = modal-title, id = "modalTitle and textcontent = picTitle?"
     let modalTitle = document.createElement("h5");//
-    //button type = button class = close data-dismiss = modal aria-label = Close
     let modalButton = document.createElement("button");//
-    //modalButton.HTMLtext(span) span get aria-hidden = true and html text &time;
     let modalSpan = document.createElement("span");//
-
-    //body gets class = modal-body and child modalPod
     let modalBody = document.createElement("div");
-    //src = picUrl
     let modalPod = document.createElement("img");
-
-    // //footer gets class modal-footer and child modalClose
-    // let modalFooter = document.createElement("div");
-    // //close gets type = button class = btn btn-secondary data-dismiss=model inntertext close
-    // let modalClose = document.createElement("button");
-
 
     //modal
     modal.classList.add("modal");
@@ -78,32 +59,23 @@ function createModal(picUrl, picTitle) {
     modalPod.src = picUrl;
     modalBody.classList.add("modal-body");
 
-    //footer attributes
+    //Did not need the footer section for the Modal but incase i decide to use it later left it in as comments.
+    //footer attributes 
     // modalClose.classList.add("btn");
     // modalClose.classList.add("btn-secondary");
     // modalClose.innerText = "Close";
     // modalFooter.classList.add("modal-footer");
 
     //append section
-    //1. modalClose => modalFooter
     //modalFooter.appendChild(modalClose);
-    //2. modalPod => modalBody 
     modalBody.appendChild(modalPod);
-    //3. modalDpan => modalButton
     modalButton.appendChild(modalSpan);
-    //4. modalTitle => modalHeader
     modalHeader.appendChild(modalTitle);
-    //5. modalButton => modalHeader
     modalHeader.appendChild(modalButton);
-    //6. modalHeader => modalContent
     modalContent.appendChild(modalHeader);
-    //7. modalBody => modalContent
     modalContent.appendChild(modalBody);
-    //8. modalFooter => modalContent
     // modalContent.appendChild(modalFooter);
-    //9. modalContent => modalDialog
     modalDialog.appendChild(modalContent);
-    //10 modalDialog => model
     modal.appendChild(modalDialog);
 
     section.appendChild(modal);
@@ -172,7 +144,7 @@ function getPlanet(e) {
 }
 
 function planetDisplay(json) {
-    //error handle here
+    //error handle here if i have time after completing everything else wanted to try to error handle when a date without pictures was selected.
     let carousel = document.createElement("div");
     let carouselInner = document.createElement("div");
     let carouselPrev = document.createElement("a");

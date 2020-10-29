@@ -13,6 +13,7 @@ body{
 p{
     font-family: "Roboto";
 }
+
 h1{
     margin-top: 2rem;
     font-size: 50px;
@@ -27,6 +28,7 @@ h5{
     width: 90%;
     
 }
+
 h2{
     border: 5px double orangered;
     border-top: 1px solid transparent;
@@ -35,6 +37,7 @@ h2{
     width: 30%;
     margin: auto;
 }
+
 header{
     text-align: center;
     border-radius: 20px;
