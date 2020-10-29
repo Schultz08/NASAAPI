@@ -1,0 +1,129 @@
+
+/* HTML target */
+body{
+    font-family: "Lobster";
+    color: white;
+    background-image: url("assets/MegaUltaSizedBackGround.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: 100%;
+    height: 100vh;
+}
+
+p{
+    font-family: "Roboto";
+}
+h1{
+    margin-top: 2rem;
+    font-size: 50px;
+}
+h2{
+    border: 5px double orangered;
+
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    width: 30%;
+    margin: auto;
+}
+header{
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Container Wraps */
+.searchForm {
+    width: 30%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: .2rem;
+    
+}
+
+.searchWrap {
+    text-align: center;
+    width: 100%;
+}
+.podWrap{
+    background-color: rgba(0, 0, 0, 0.362);
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.wrapDiv{
+    width: 50%;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+
+
+
+
+/* Touch Ups */
+.podImg {
+    width: 175px;
+    height: 175px;
+    border-radius: 25%;
+    box-shadow: 1px 1px 8px white;
+}
+
+.podImg:hover{
+    opacity: .5;
+}
+.notice{
+    color: red;
+}
+
+.submit{
+    color: white;
+    border: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+/* modal CSS */
+.modal-content {
+    background-color: transparent;
+    border: 0px transparent;
+}
+
+.modal-header {
+    border: 0px transparent;
+    background-color: black;
+    color: white;
+}
+
+.modal-span {
+    color: white;
+}
+
+.modal-footer {
+    border: 0px transparent;
+}
+
+.modal-body {
+    align-self: center;
+    padding: 0px;
+    box-shadow: 10px 0px black, -10px 0px black, 0px 10px black, 0px -10px black, 10px 10px black, -10px -10px black, -10px 10px black, 10px -10px black;
+}
+
+span {
+    color: white
+}
+
+span:hover {
+    color: red;
+}
